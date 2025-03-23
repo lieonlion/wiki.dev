@@ -11,7 +11,7 @@ hero:
     alt: LieOnLion
   actions:
     - theme: brand
-      text: Minecarft Mods
+      text: Minecraft Mods
       link: /mods/
     - theme: alt
       text: Everything

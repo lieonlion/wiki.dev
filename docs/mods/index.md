@@ -5,8 +5,7 @@ pageTitleLink: ./
 
 hero:
   name: "Minecraft Mods"
-  text: "All my Wikis in One"
-  tagline: Find a Wiki for any of my Projects
+  tagline: Wikis for my Minecraft Mods
   actions:
     - theme: brand
       text: Quad

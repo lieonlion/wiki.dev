@@ -18,7 +18,7 @@
   --vp-c-brand-soft: #5c27ce;
 }
 
-.VPImage {
+.VPImage.image-src {
   width: 320px;
   height: 320px;
 }

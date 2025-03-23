@@ -12,10 +12,14 @@ import { useLangs } from 'vitepress/dist/client/theme-default/composables/langs.
 import { useSidebar } from 'vitepress/dist/client/theme-default/composables/sidebar.js'
 import { normalizeLink } from 'vitepress/dist/client/theme-default/support/utils.js'
 import VPImage from 'vitepress/dist/client/theme-default/components/VPImage.vue'
+import { NavBarTitleTheme } from '../nav-bar-title-theme'
+import { useNavBarTitle } from '../composables/navbar-title'
 
-const { site, theme, frontmatter: fm } = useData()
+const { site, theme, frontmatter: fm } = useData<NavBarTitleTheme.Config>()
 const { hasSidebar } = useSidebar()
 const { currentLang } = useLangs()
+
+const { navbar_title } = useNavBarTitle()
 
 const link = computed(() =>
   typeof theme.value.logoLink === 'string'
@@ -40,13 +44,14 @@ const target = computed(() =>
   <div class="VPNavBarTitle" :class="{ 'has-sidebar': hasSidebar }">
     <a
       class="title"
-      :href="fm.pageTitleLink ? normalizeLink(fm.pageTitleLink) : link ?? normalizeLink(currentLang.link)"
+      :href="navbar_title.link ? normalizeLink(navbar_title.link) : link ?? normalizeLink(currentLang.link)"
       :rel="rel"
       :target="target"
     >
       <slot name="nav-bar-title-before" />
-      <VPImage v-if="theme.logo" class="logo" :image="theme.logo" />
-      <span v-if="fm.pageTitle" v-html="fm.pageTitle"></span>
+      <VPImage v-if="navbar_title.logo" class="logo" :image="navbar_title.logo" />
+      <VPImage v-else-if="theme.logo" class="logo" :image="theme.logo" />
+      <span v-if="navbar_title.text" v-html="navbar_title.text"></span>
       <span v-else-if="theme.siteTitle" v-html="theme.siteTitle"></span>
       <span v-else-if="theme.siteTitle === undefined">{{ site.title }}</span>
       <slot name="nav-bar-title-after" />
