@@ -36,7 +36,11 @@ export default defineConfig({
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/lieonlion/wiki.dev' }
-    ]
+    ],
+
+    editLink: {
+      pattern: 'https://github.com/lieonlion/wiki.dev/edit/main/:path'
+    }
   },
 
   vite: {
