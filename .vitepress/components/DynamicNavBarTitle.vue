@@ -2,7 +2,7 @@
   This code belongs to Void(0) - https://voidzero.dev/
   (they are very cool people).
 
-  It was taken from the VitePress porject and is NOT my own work.
+  It was taken from the VitePress project and is NOT my own work.
   Very small changes have been made.
 -->
 <script setup lang="ts">
