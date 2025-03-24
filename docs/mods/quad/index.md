@@ -15,7 +15,7 @@ Now coming to Quad is custom Datapack API's with Data Driven Systems. (Currently
 - Block Replacements: Replace any block in a specified structure with another block.
 - Point(s) of Interest: Add new Point(s) of Interest for entities.
 
-## How to use a Quad.
+## How to use a Quad
 
 ### Tags
 

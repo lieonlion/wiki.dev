@@ -8,7 +8,9 @@ Quad Basics will be a mod that removes the extra functionallity of Quad, only ma
 
 ## Removing features:
 
-Datapacks will still be able to use the functionallity of the systems these features use.
+::: tip DATAPACKS
+Datapacks will still be able to use the functionallity (the tags) of the systems these features use, while mods wont.
+:::
 
 - Crying Obsidian making Nether Portals.
 - Leather Items don't sink in Powdered Snow.

@@ -16,6 +16,7 @@ export default defineConfigWithTheme<NavBarTitleTheme.Config>({
   },
   
   cleanUrls: true,
+  lastUpdated: true,
 
   title: "LieOnLion",
   description: "Wiki's for any of LieOnLion's Projects",
@@ -75,12 +76,12 @@ export default defineConfigWithTheme<NavBarTitleTheme.Config>({
       pattern: 'https://github.com/lieonlion/wiki.dev/edit/main/:path'
     },
 
-    outline: [2, 3]
+    outline: [2, 3],
   },
 
   vite: {
     plugins: [
-      groupIconVitePlugin()
+      groupIconVitePlugin(),
     ],
     resolve: {
       alias: [
