@@ -29,8 +29,27 @@ export default defineConfigWithTheme<NavBarTitleTheme.Config>({
     sidebar: {
       '/mods/quad/': [
         {
+          base: "/mods/quad/",
           items: [
-            
+            {
+              text: "Tags",
+              base: "/mods/quad/tags/",
+              collapsed: true,
+              items: [
+                {
+                  text: "Edit a Tag",
+                  link: "edit_a_tag"
+                },
+              ]
+            },
+            {
+              text: "Quad Basics",
+              link: "quad_basics"
+            },
+            {
+              text: "Quad Extra",
+              link: "quad_extra"
+            }
           ]
         }
       ]
@@ -44,7 +63,7 @@ export default defineConfigWithTheme<NavBarTitleTheme.Config>({
       '/mods/quad/': {
         text: "Quad",
         logo: "https://lieonlion.github.io/quad-docs/img/quad-logo.png",
-        link: "./"
+        link: "/mods/quad/"
       },
     },
 

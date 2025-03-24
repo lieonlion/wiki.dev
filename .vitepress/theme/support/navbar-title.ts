@@ -4,7 +4,7 @@ import { isType } from './util'
 
 type NavBarTitleItem = NavBarTitleTheme.NavBarTitleItem
 
-/**
+/*
  * Get the `NavBarTitle` from navBarTitle option. This method will ensure to get correct
  * navBarTitle config from `NavBarTitleConfig` with various path combinations such
  * as matching `guide/` and `/guide/`. If no matching config was found, it will
