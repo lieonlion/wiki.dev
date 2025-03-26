@@ -1,5 +1,5 @@
 import { defineConfigWithTheme } from 'vitepress'
-import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-icons'
+import { groupIconMdPlugin, groupIconVitePlugin, localIconLoader } from 'vitepress-plugin-group-icons'
 import { fileURLToPath, URL } from 'node:url'
 import { NavBarTitleTheme } from './theme/nav-bar-title-theme'
 
@@ -81,7 +81,11 @@ export default defineConfigWithTheme<NavBarTitleTheme.Config>({
 
   vite: {
     plugins: [
-      groupIconVitePlugin(),
+      groupIconVitePlugin({
+        customIcon: {
+          'pack.mcmeta': localIconLoader(import.meta.url, '../assets/icons/mcmeta.svg'),
+        }
+      }),
     ],
     resolve: {
       alias: [
