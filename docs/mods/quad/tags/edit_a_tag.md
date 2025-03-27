@@ -16,7 +16,7 @@ Some Minecraft versions have different functionality defined in datapacks, and f
 
 If you are too lazy to read, heres a video you can watch about the steps on creating a datapack.
 
-<iframe width="100%" style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/E0BLq5Ll37c" title="Making a Datapack" frameborder="0" allowfullscreen />
+<iframe width="100%" style="aspect-ratio: 16 / 9; border-radius: 8px" src="https://www.youtube.com/embed/E0BLq5Ll37c" title="Making a Datapack" frameborder="0" allowfullscreen />
 
 ::: warning
 Note that if you do watch the video, you will _probably_ do more than whats needed. So please only go up to them making the `data` folder, which is about 3:10 into the video. After that point, go to [Structuring a Datapack](#structuring-a-datapack).
