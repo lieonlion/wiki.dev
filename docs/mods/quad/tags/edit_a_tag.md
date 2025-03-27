@@ -14,6 +14,16 @@ Some Minecraft versions have different functionality defined in datapacks, and f
 
 ### Making a Datapack
 
+If you are too lazy to read, heres a video you can watch about the steps on creating a datapack.
+
+<iframe width="100%" style="aspect-ratio: 16 / 9;" src="https://www.youtube.com/embed/E0BLq5Ll37c" title="Making a Datapack" frameborder="0" allowfullscreen />
+
+::: warning
+Note that if you do watch the video, you will _probably_ do more than whats needed. So please only go up to them making the `data` folder, which is about 3:10 into the video. After that point, go to [Structuring a Datapack](#structuring-a-datapack)
+:::
+
+#### My tutorial
+
 So, we need to make a datapack. Every datapack starts as a folder, with another folder and 2 files contained within. This main folder can be named anything you want, usually the name of the datapack itself in kebab-case. (`this-would-be-your-datapack-name`).
 
 ```
