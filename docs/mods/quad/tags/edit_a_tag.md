@@ -126,12 +126,9 @@ With Quad for Minecraft 1.21, `enchantment(s)` tags are no longer available.
 ### Creating the File
 
 ```json [quad/tags/item/tag_name.json]
-// COPY ME (and delete this line).
 {
-  "pack": {
-    "description": "Some cool Datapack description, wow",
-    "pack_format": 71
-  }
+  "replace": false,
+  "values": []
 }
 ```
 
