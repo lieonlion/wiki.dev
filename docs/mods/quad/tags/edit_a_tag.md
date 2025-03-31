@@ -118,7 +118,7 @@ So, the files in the `tags` folder, Quad adds 4 different types:
 ::: danger
 Please make sure you used the correct Minecraft version for the names.
 
-With Quad for Minecraft 1.21, `enchantment` are no longer available.
+With Quad for Minecraft 1.21, `enchantment(s)` tags are no longer available.
 :::
 
 ## Finding a Tag
