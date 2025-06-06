@@ -8,7 +8,7 @@ title: Edit a Tag
 
 The base functionality Quad supplies are controlled by item and block Tags. So, now the question is, "how do you edit a tag?" All of Quad's APIs are controlled with a datapack, which can be loaded by any vanilla or modded Minecraft world.
 
-::: tip VERSIONS
+::: warning VERSIONS
 Some Minecraft versions have different functionality defined in datapacks, and file or folder names can be different. So if something doesn't work, check you followed the correct structure for your selected Minecraft version.
 :::
 
@@ -16,7 +16,13 @@ Some Minecraft versions have different functionality defined in datapacks, and f
 
 #### TL;DR
 
-If you are too lazy to read, here's a video you can watch about the steps on creating a datapack.
+If you are too lazy to read, here's a video you can watch about the steps on creating a datapack. Please look at these **TIPS** first.
+
+::: tip TIPS
+1. Use VSCode, and useful plugins.
+2. Keep checking names of Files, Folders, and Data Values.
+3. Try and read this Wiki as much as possible.
+:::
 
 <iframe width="100%" style="aspect-ratio: 16 / 9; border-radius: 8px" src="https://www.youtube.com/embed/E0BLq5Ll37c" title="Making a Datapack" frameborder="0" allowfullscreen />
 
@@ -74,7 +80,7 @@ Normally, you would create a folder with your own unique namespace, however, wit
 
 If you want to add your own namespace (we won't use this for tags, but it will be used for other data like `block_replacements`), then make another folder in `data`, and call it what you want.
 
-::: tip
+::: tip NAMING
 Keep the name of the namespace short, you need it to be memorable and easy to type, as it will be used for referencing other data (such as with a tag, `<your-namespace>:<tag-name>`).
 :::
 
@@ -86,7 +92,7 @@ Tags are placed in the `tags` folder, 😱, under a namespace. And here is where
 The next folders and files we will be creating will be in the `data/quad` folder, if it is not in the folder, so if the features don't work, did you create the files in the `quad` namespace?
 :::
 
-So, the files in the `tags` folder, Quad adds 4 different types:
+So, the files in the `tags` folder, Quad uses 4 different types:
 
 - Items /~/ Item
 - Blocks /~/ Block
@@ -143,11 +149,31 @@ Quad has its own list of its tags, [To Be Added](./edit_a_tag.md), where you can
 
 ### The Example
 
-Continuing on from
+Continuing on with the tutorial, we will use an example tag to make things easier for me writing and explaining this 😴. The tag we will be editing will be the Quad item tag `quad:snow/boots`, a simple tag that you can *easily* 🤨 follow along with, also I will call the datapack `example-pack`.
+
+So with what we know, this is the current structure of the datapack (of course change it how you need) for Minecraft 1.21.5 (the current latest).
+
+```
+📂 example-pack
+├─ 📄 pack.mcmeta
+├─ 📄 pack.png
+└─ 📂 data
+    └─ 📂 quad
+        └─ 📂 tags
+            └─ 📂 item
+                └─ 📂 snow
+                    └─ 📄 boots.json
+```
+
+So many folders 😮‍💨, and notice how the tag file has the `json` file extension. If you create this with the file explorer (use VSCode), you will need to create a blank `txt` file and replace the end with `.json`.
+
+::: tip Spelling
+You will **NOT** believe how many times I have made a spelling mistake and it breaks everything, so check everything, Files, Folders, and Data Values, and then do it all again.
+:::
 
 ### Creating the File
 
-```json [quad/tags/item/tag_name.json]
+```json [quad:item/snow/boots.json]
 {
 	"replace": false,
 	"values": []
