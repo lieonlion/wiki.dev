@@ -34,7 +34,7 @@ Note that if you do watch the video, you will _probably_ do more than what's nee
 
 So, we need to make a datapack. Every datapack starts as a folder, with another folder and 2 files contained within. This main folder can be named anything you want, usually the name of the datapack itself in kebab-case. (`this-would-be-your-datapack-name`).
 
-The first file you will make is probably the most important file in a datapack, this is the file that will let minecraft find and load your datapack. If for some reason you do **_not_** see your datapack in the Minecraft menu, check there isn't a mistake with this file (like spelling mistakes, the file named wrong, or missing data). The file `pack.mcmeta` contains very little information, with it using JSON formatting, here you can put a description for your datapack, as well as defining the pack's "pack_format" version.
+The first file you will make is probably the most important file in a datapack, this is the file that will let minecraft find and load your datapack. If for some reason you do **_not_** see your datapack in the Minecraft menu, check there isn't a mistake with this file (like spelling mistakes, the file named wrong, or missing data). The file `pack.mcmeta` contains very little information, with it using `JSON` formatting, here you can put a description for your datapack, as well as defining the pack's "pack_format" version.
 
 The latest version of Minecraft (as of writing this) is 1.21.5, which uses the "pack_format" of 71. For other Minecraft versions and what "pack_format" number they use, please check the [Minecraft Wiki](https://minecraft.wiki/w/Data_pack#Pack_format), it also includes any extra information like what each new "pack_format" added/changed.
 
