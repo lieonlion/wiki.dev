@@ -74,8 +74,8 @@ Normally, you would create a folder with your own unique namespace, however, wit
 ├─ 📄 pack.mcmeta
 ├─ 📄 pack.png
 └─ 📂 data
-    ├─ 📁 quad
-    └─ 📁 <your-namespace>
+   ├─ 📁 quad
+   └─ 📁 <your-namespace>
 ```
 
 If you want to add your own namespace (we won't use this for tags, but it will be used for other data like `block_replacements`), then make another folder in `data`, and call it what you want.
@@ -105,30 +105,30 @@ So, the files in the `tags` folder, Quad uses 4 different types:
 ```[~1.20.4]
 📂 quad
 └─ 📂 tags
-    ├─ 📁 items
-    ├─ 📁 blocks
-    ├─ 📁 enchantments
-    └─ 📂 worldgen
-        └─ 📁 structures
+   ├─ 📁 items
+   ├─ 📁 blocks
+   ├─ 📁 enchantments
+   └─ 📂 worldgen
+      └─ 📁 structures
 ```
 
 ```[1.20.6]
 📂 quad
 └─ 📂 tags
-    ├─ 📁 item
-    ├─ 📁 block
-    ├─ 📁 enchantment
-    └─ 📂 worldgen
-        └─ 📁 structure
+   ├─ 📁 item
+   ├─ 📁 block
+   ├─ 📁 enchantment
+   └─ 📂 worldgen
+      └─ 📁 structure
 ```
 
 ```[1.21+]
 📂 quad
 └─ 📂 tags
-    ├─ 📁 item
-    ├─ 📁 block
-    └─ 📂 worldgen
-        └─ 📁 structure
+   ├─ 📁 item
+   ├─ 📁 block
+   └─ 📂 worldgen
+      └─ 📁 structure
 ```
 
 :::
@@ -141,7 +141,7 @@ Quad doesn't have any `enchantment(s)` tags with Minecraft 1.21+.
 
 ## Finding a Tag
 
-Minecraft uses tags everywhere, and there is a lot to look through and edit, so you will need to have an idea of what tag you need to edit and why you want to edit the tag. An example could be when making a mod that adds a new wood type, you would want to add to Minecraft's `minecraft:logs` item and block tags.
+Minecraft uses tags everywhere, and there are a lot to look through and edit, so you will need to have an idea of what tag you need to edit and why you want to edit the tag. An example could be when making a mod that adds a new wood type, you would want to add to Minecraft's `minecraft:logs` item and block tags.
 
 You can find the different tags Minecraft itself adds and uses on the [Minecraft Wiki](https://minecraft.wiki/w/Tag#List_of_tag_types) once again, it shows you the different tag types (vanilla) Minecraft has, and clicking on any of them will show a list of the built in ones and each of their uses.
 
@@ -149,36 +149,41 @@ Quad has its own list of its tags, [To Be Added](./edit_a_tag.md), where you can
 
 ### The Example
 
-Continuing on with the tutorial, we will use an example tag to make things easier for me writing and explaining this 😴. The tag we will be editing will be the Quad item tag `quad:snow/boots`, a simple tag that you can *easily* 🤨 follow along with, also I will call the datapack `example-pack`.
+Continuing on with the tutorial, we will use an example tag to make things easier for me writing and explaining this. The tag we will be editing will be the Quad item tag `quad:snow/boots`, a simple tag that you can *easily* 🤨 follow along with, also I will call the datapack `example-pack`.
 
 So with what we know, this is the current structure of the datapack (of course change it how you need) for Minecraft 1.21.5 (the current latest).
+
+### Creating the File
 
 ```
 📂 example-pack
 ├─ 📄 pack.mcmeta
 ├─ 📄 pack.png
 └─ 📂 data
-    └─ 📂 quad
-        └─ 📂 tags
-            └─ 📂 item
-                └─ 📂 snow
-                    └─ 📄 boots.json
+   └─ 📂 quad
+      └─ 📂 tags
+         └─ 📂 item
+            └─ 📂 snow
+               └─ 📄 boots.json
 ```
 
-So many folders 😮‍💨, and notice how the tag file has the `json` file extension. If you create this with the file explorer (use VSCode), you will need to create a blank `txt` file and replace the end with `.json`.
+So many folders 😮‍💨, and notice how the tag file has the `JSON` file extension. If you create this with the file explorer (use VSCode), you will need to create a blank `TXT` file and replace the end with `.json`.
 
 ::: tip Spelling
 You will **NOT** believe how many times I have made a spelling mistake and it breaks everything, so check everything, Files, Folders, and Data Values, and then do it all again.
 :::
 
-### Creating the File
-
-```json [quad:item/snow/boots.json]
+```json [quad:snow/boots.json]
 {
 	"replace": false,
 	"values": []
 }
 ```
+
+After we have created the file, which you definitely used VSCode to do, we need to add some information to it as it is currently empty. As stated before, tags use the `JSON` format. The base of all tags is this above, with two important values:
+
+- `replace`, this value isn't required, but when set to `false` it will mean the file will add onto the tag instead of completely replacing it. If this value was missing or set to `true` (the values default), only values in this specific file will be included in the tag, removing values that other packs have added (depending on the loading order). **More than likely**, you want this to be set to `false`.
+- `values`, this value is required, its an array of all the values you want to add to the specified tag, as if the name wasn't a big clue. This is the most important value and the one you will edit and add to the most.
 
 ## Tag Values
 
